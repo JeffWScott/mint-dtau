@@ -8,7 +8,8 @@
 	function mint(){
 		if (vk === "") {
 			inputField.setCustomValidity("I refuse to mint valuable Test TAU to nobody!");
-            inputField.reportValidity();
+			inputField.reportValidity();
+			return
 		}
 		let body = JSON.stringify({vk, amount})
 
