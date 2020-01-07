@@ -1,14 +1,17 @@
 <script>
-	export let name;
+	let address
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+<main class="main">
+	<h1>Mint me some test TAU!</h1>
+	<input class="address" type="text" bind:value={address} />
+
 </main>
 
 <style>
 	main {
+		display: flex;
+		flex-direction: column;
 		text-align: center;
 		padding: 1em;
 		max-width: 240px;
@@ -18,13 +21,16 @@
 	h1 {
 		color: #ff3e00;
 		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+		font-size: 2em;
+		font-weight: 400;
 	}
 
 	@media (min-width: 640px) {
 		main {
 			max-width: none;
 		}
+	}
+	.address{
+		width: 300px;
 	}
 </style>
