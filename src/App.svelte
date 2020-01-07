@@ -1,4 +1,6 @@
 <script>
+	import Nav from './Nav.svelte';
+
 	let inputField;
 	let vk = "";
 	let amount = 100000;
@@ -34,13 +36,20 @@
 		buttonName = "mint"
 	}
 </script>
-
+<Nav />
 <main class="main">
 	<h1>Mint Me Some Test TAU!</h1>
 	<div class="address-row">
 		<input bind:this={inputField} class="address" type="text" bind:value={vk} placeholder={placeholder} on:keyup={changeButtonName}/>
 		<button on:click={mint}>{buttonName}</button>
 	</div>
+
+		<a class="link" href="https://chrome.google.com/webstore/detail/lamden-wallet-browser-ext/lgkgmnhecgdjiifepobmobkeeeheakko"
+		rel="noopener noreferrer"
+		target="_blank">
+			GET Lamden Wallet
+		</a>
+
 </main>
 
 <style>
@@ -58,6 +67,10 @@
 		color: #461BC2;
 		font-size: 2em;
 		font-weight: 400;
+	}
+
+	a{
+		margin-top: 10px;
 	}
 
 	button {
