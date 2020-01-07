@@ -20,7 +20,6 @@
 }
 
 .brand{
-    margin-bottom: 6px;
     display: flex;
     flex-direction: row;
     align-items: center;

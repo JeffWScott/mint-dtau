@@ -36,31 +36,16 @@
 		buttonName = "mint"
 	}
 </script>
-<Nav />
-<main class="main">
-	<h1>Mint Me Some Test TAU!</h1>
-	<div class="address-row">
-		<input bind:this={inputField} class="address" type="text" bind:value={vk} placeholder={placeholder} on:keyup={changeButtonName}/>
-		<button on:click={mint}>{buttonName}</button>
-	</div>
-
-		<a class="link" href="https://chrome.google.com/webstore/detail/lamden-wallet-browser-ext/lgkgmnhecgdjiifepobmobkeeeheakko"
-		rel="noopener noreferrer"
-		target="_blank">
-			GET Lamden Wallet
-		</a>
-
-</main>
 
 <style>
 	main {
 		display: flex;
 		flex-direction: column;
 		text-align: center;
-		max-width: 240px;
 		justify-content: center;
 		align-items: center;
 		height: 100%;
+		width: 100%;
 	}
 
 	h1 {
@@ -80,19 +65,34 @@
 		border-radius: 0 5px 5px 0;
 	}
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
 	.address-row{
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
+		padding: 0 10px;
+		box-sizing: border-box;
+		width: 100%;
 	}
 	.address{
-		width: 600px;
-		margin: 0 0 0 10px;
+		width: 100%;
+		max-width: 600px;
+		margin: 0px;
 	}
 </style>
+
+<Nav />
+<main class="main">
+	<h1>Mint Me Some Test TAU!</h1>
+	<div class="address-row">
+		<input bind:this={inputField} class="address" type="text" bind:value={vk} placeholder={placeholder} on:keyup={changeButtonName}/>
+		<button on:click={mint}>{buttonName}</button>
+	</div>
+
+		<a class="link" href="https://chrome.google.com/webstore/detail/lamden-wallet-browser-ext/lgkgmnhecgdjiifepobmobkeeeheakko"
+		rel="noopener noreferrer"
+		target="_blank">
+			GET Lamden Wallet
+		</a>
+
+</main>
