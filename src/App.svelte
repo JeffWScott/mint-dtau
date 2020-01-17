@@ -15,7 +15,7 @@
 		}
 		let body = JSON.stringify({vk, amount})
 
-		fetch("http://167.71.159.131:8000/mint", {
+		fetch("https://testnet.lamden.io/mint", {
             method: 'POST',
             body 
         })
